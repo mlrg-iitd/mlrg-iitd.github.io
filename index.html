@@ -1,0 +1,247 @@
+<html>
+	<head>
+		<title>IITD Machine Learning Reading Group</title>
+		<!--<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500" />-->
+		<script type="text/javascript">
+			function showpapers(e){
+				f = e;
+				var div;
+				for(div = e.nextSibling; div.className != "papers"; div = div.nextSibling);
+
+				if(div.style.display=="block"){
+					div.style.display="";
+				} else {
+					div.style.display="block";
+				}
+				return true;
+			}
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script>
+		  $(document).ready(function(){
+		      $("#toggle").click(function(){
+			  $(".abstract").toggle();
+		      });
+		  });
+		</script>
+	</head>
+	<style type="text/css">
+		#main {
+			margin:0 auto; 
+			max-width:50em;
+			line-height:1.5;
+			padding:4em 1em;
+		 }
+		.papers {
+			background-color: #fafafa;
+			display: none;
+		}
+		.abstract{
+		    font-style: italic;
+               	    display: block;
+		background-color: #dededb;
+		padding: 10px;
+		border-radius: 20px;
+		}
+		.show {
+			background-color: #fafafa;
+			display: block;
+		}
+		.title {
+			font-weight: bold;
+		}
+		a.paperlink {
+			text-decoration: none;
+		}
+	</style>
+	<!--<body style="margin:0 auto; max-width:50em; line-height:1.5; padding: 4em 1em;">-->
+	<body>
+	<div id="main">
+		<h2 style="color:royalblue;">IITD ML Reading Group</h2>	
+		<p> Hello Machine learners!!<br>
+Welcome to our Machine Learning Reading Group open to all IITD students and faculty. We are a group of Machine Learning and Deep Learning enthusiasts who meet regularly to discuss new developments and foundational concepts in Machine learning. Each week we will read and discuss an interesting paper selected by the group. 
+
+		</p>
+		<span class="title">Time and place:</span> Weekly meetings every <b>Sunday 17:00 to 18:00</b> in <b>B-15, Aravali Hostel (tentative)</b>. <!-- Subscribe to the mailing list below for specific details. --><br /><br /> 
+	  <span class="title">Format:</span> Each meeting will go on for roughly an hour and will be led by 1 or 2 speakers. These can be informal whiteboard talks and speakers do not need to use slides.
+
+	  <i>Attendees are expected to have read (or skimmed) the papers that are going to be presented so as not to be thrown off by the notation or problem statement and divert efforts toward more lively discussions related to the paper. </i>
+	  The focus of the group is to cover topics of broad interest, we might at times dive deep into specific topics while hoping that every attendee will learn something irrespective of their level of expertise. Broadly, we will discuss papers with the following themes.
+	  <ul>
+	    <li><b>Staying current</b> Cover most provocative, interesting, hyped and buzzing recent publications.</li>
+	    <li><b>Supervised Learning</b></li>
+	    <li><b>Deep Learning</b>  </li>
+	    <li><b>Deep Reinforcement Learning</b>  </li>
+	  </ul>
+	
+	  If you would like to discuss a paper with the group, please fill this form <a href=" iitd.info/mlrg">iitd.info/mlrg</a>.
+	  <br /> <br /> 
+	  
+	  
+	  <span class="title">Facebook Group:</span> If you would like to be notified of upcoming talks, please join our <a href="https://www.facebook.com/groups/393265531607167/">Facebook Group</a>.<br />
+	  <h2 style="color:darkslategray;">Upcoming talks</h2>
+	  <button id="toggle">Toggle Abstracts</button>
+	  <ul>
+	    <li>
+	      September 08, 2019. Presenter: Anchit Tandon <br/>
+	      Title: <a href="https://www.nature.com/articles/nature14539.pdf"> Deep Learning</a> [slides] <br/>
+	      <div class="abstract">
+			TBA
+	      </div>
+	    </li>
+	  </ul>
+	  
+	  <!-- <iframe src="https://calendar.google.com/calendar/embed?src=k8klljpf1hkpekvlfdblpp5j54%40group.calendar.google.com&ctz=Asia%2FKolkata" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
+		
+		<h2 style="color:darkslategray;">Past talks</h2>
+		<h4> 2019</h4>
+		<!-- <ul>
+		  <li>July 12th, 2019. Presenter: Vishal Kaushal <br/>
+		    Title: Discussion on two papers from CVPR 2019 <a href="https://docs.google.com/presentation/d/10H_WdZc6idcMwCAqQ_3thsk57sIPYIFRAC-OuszomzI/edit#slide=id.p">[slides]</a> <br/>
+		    <div class="abstract">
+		      I will be presenting the following two papers (from the recently
+		      concluded CVPR 2019) tomorrow. Looking forward to an engaging
+		      discussion.
+		      
+		      <ol>
+			<li><a href='http://openaccess.thecvf.com/content_CVPR_2019/papers/Cubuk_AutoAugment_Learning_Augmentation_Strategies_From_Data_CVPR_2019_paper.pdf'>AutoAugment: Learning Augmentation Strategies From Data</a></li>
+			<li><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Otani_Rethinking_the_Evaluation_of_Video_Summaries_CVPR_2019_paper.pdf">Rethinking the Evaluation of Video Summaries</a></li>
+		      </ol>
+		    </div>
+	      
+		  </li>
+		  <li>July 5th, 2019. Presenter: Prathamesh Deshpande</li>
+		    Title: Streaming Adaptation of Deep Forecasting Models using Adaptive Recurrent Units <a href="resources/aiml_05jul.pdf" target="_blank">[slides]</a> </br>
+		    <div class="abstract">
+		      This week I am going to present our work on Adaptive Recurrent Units (ARU). ARU is a parameter-free local model that can be used to locally adapt a global RNN-based model. Unlike existing methods of adaptation that are either memory-intensive or non-responsive after training, ARUs require only fixed-sized state and adapt to streaming data via an easy RNN-like update operation. The core principle driving ARU is simple — maintain sufficient statistics of conditional Gaussian distributions and use them to compute local parameters in closed form. The contribution of the paper is in embedding such local linear models in globally trained deep models while allowing end-to-end training on the one hand, and easy RNN-like updates on the other. Across several datasets, ARU is more effective than recently proposed local adaptation methods that tax the global network to compute local parameters.
+		    </div>
+	      </li>
+
+		  <li>June 28th, 2019. Presenter: <a href="https://www.cs.rice.edu/~as143/">Prof. Anshumali Shrivastava (Rice University)</a> <br/>
+		  Title: Hashing Meets Statistical Estimation and Inference: Adaptive Sampling at the Cost of Random Sampling <a href="resources/aiml_28jun.pdf" target="_blank">[slides]</a> </br>
+		  <div class="abstract">
+		    Sampling is one of the fundamental hammers in machine learning (ML) for reducing the size and scale of the problem at hand. Many ML applications demand adaptive sampling for faster convergence. However, the cost of sampling itself is prohibitive, which creates a fundamental barrier. In this talk, I will demonstrate how hashing algorithms naturally breaks this barrier leading to efficient machine learning algorithms.<br/><br/>
+		    I will discuss some of my recent and surprising findings on the use of hashing algorithms for large-scale estimations. Locality Sensitive Hashing (LSH) is a hugely popular algorithm for sub-linear near neighbor search. However, it turns out that fundamentally LSH is a constant time (amortized) adaptive sampler from which efficient near-neighbor search is one of the many possibilities. LSH offers a unique capability to do smart sampling and statistical estimations at the cost of few hash lookups. Our observation bridges data structures (probabilistic hash tables) with efficient unbiased statistical estimations. I will demonstrate how this dynamic and efficient sampling beak the computational barriers in adaptive estimations, where it is possible that we pay roughly the cost of uniform sampling but get the benefits of adaptive sampling. I will demonstrate the power of a straightforward idea for a variety of problems 1) Adaptive Gradient Estimations for efficient SGD, 2) Efficient Deep Learning, 3) Anomaly Detection, and 4) The first possibility of sub-linear sketches for near-neighbor queries.
+		  </div>
+		  </li>
+
+		  
+		  <li>June 21, 2019. Presenter: Rishabh Dabral</br>
+		    Human pose estimation under noisy supervision [slides] 
+		    <div class="abstract">
+		      I'll be discussing the following two papers in this week's discussion. Both the papers come from the 3D human pose/shape estimation literature. Recently, the literature has undergone a surge in papers that attempt to solve human pose/shape with either weak supervision or no supervision at all. Both the papers are in the same line of work. I'll first introduce the broad problem statement and then discuss briefly some of the pre-requisites before placing the two papers up for detailed discussion.
+		      <br/>
+	      <ol>
+		<li><a href="https://akanazawa.github.io/hmr/"> Human Mesh Recovery, Kanazawa et al</a></br>
+		</li>
+		<li>
+		  <a href="https://arxiv.org/pdf/1903.05684.pdf">Neural Scene Decomposition, Rhodin et al</a></br>
+		</li>
+	      </ol>
+		    </div>
+		  </li>
+		  
+		  <li>June 14, 2019. Presenter: Abhijeet Awasthi</br>
+		    Robustness of Machine Learning Models <a href="https://docs.google.com/presentation/d/1Ks6Y_Mg_b-LcTGpxlC7Jj4eExACfXho9DXhQHwDbmhk/edit?usp=sharing"> [slides]  </a>
+		    <div class="abstract">
+		      This week I will be discussing the following two papers which are related to the robustness of machine learning models.		      
+	      </br>
+	      <ol>
+		<li><a href="https://arxiv.org/pdf/1901.09960.pdf"> Using Pre-Training Can Improve Model Robustness and Uncertainty [ICML 2019] </a></br>
+		  It has been observed that training the model on task-specific data for a longer time can yield similar performance in comparison to pretraining followed by fine-tuning. Apart from faster convergence, what else does pre-training offer in the cases where it does not yield improvement on traditional accuracy metrics? This paper conducts several experiments to show that pre-training leads to robustness to label corruption, class imbalance and adversarial perturbations. They also show that pre-trained models are better calibrated and do better in the task of out-of-distribution detection.
+		</li>
+		<li>
+		  <a href="https://arxiv.org/pdf/1905.00563.pdf">Investigating Robustness and Interpretability of Link Prediction via Adversarial Modifications [NAACL 2019]</a></br>
+		  How would link prediction in a Knowledge graph get affected by adding some fake links or removing some existing links? Since knowledge graphs are always noisy and incomplete, a desirable property of link prediction is to be robust to such changes. This paper proposes an effective way to estimate the change in link prediction score wrt perturbations to KG. They also propose an efficient method to search a very large space for fake links which could potentially deteriorate the link prediction performance. Identifying such links allows incorporating them as negative instances during training, thus making the link prediction model more robust to KG perturbations.
+		</li>
+	      </ol>
+		    </div>
+		  </li>
+
+		  <li>June 7, 2019. Presenter: Vihari Piratla <br/>
+		    Representation learning. 
+		    <a href="https://docs.google.com/presentation/d/1I1M-v8xBF7heIiH88qHcbOuJxTRy_hV15I34AdDp4eA/edit?usp=sharing">[slides]</a>.
+		    <div class="abstract">
+		      <ol>
+			<li> "Learning Independent Causal Mechanisms", ICML 2018 -- <a href="http://proceedings.mlr.press/v80/parascandolo18a.html">http://proceedings.mlr.press/v80/parascandolo18a.html</a> </li>
+			<li> "ORDERED NEURONS: INTEGRATING TREE STRUCTURES INTO RECURRENT NEURAL NETWORKS", ICLR 2019 -- <a href="https://openreview.net/pdf?id=B1l6qiR5F7">https://openreview.net/pdf?id=B1l6qiR5F7</a> </li>
+		      </ol>
+		      <br/>
+		      
+		      There has been a lot of interest in learning representations that disentangle all factors of variation in the input referred to as disentangled representations. We will look at what these are, their advantages and how they are related to causal models. We will discuss in detail a 2018 ICML paper titled: "Learning Independent Causal Mechanisms" which attempts to identify and learn independent causal processes on MNIST dataset. This modular design of causal models holds the promise of easier generalization and was demonstrated to generalize to unseen Omniglot examples. Finally, we will conclude with a short survey on techniques for disentangled representations. 
+		    <br/><br/>
+		    The quest to build better language models (predict what you are going to say before you say it) has been an active interest for a long time now. In the recently concluded ICLR 2019 conferenece, one of the best papers went to a method titled "ORDERED NEURONS: INTEGRATING TREE STRUCTURES INTO RECURRENT NEURAL NETWORKS" that improves Neural Language Models (NLM). They employ a clean trick to identify the latent syntactic tree structure of the sentence and thereby extending the linear chain LSTM to pay attention to the hierarchical structure of the tree. Apart from improving the language model perplexity scores on standard datasets, they also demonstrate state of the art results on unsupervised inference of syntactic trees. We will conclude with a discussion on scope for further improvement in NLMs.
+
+		    </div>
+		  </li>
+		  <li>May 31, 2019.
+		    Screening of a pre-recorded talk.
+		    Presenter: Swabha Swayamdipta <br/>
+		    Title: <a href="https://www.youtube.com/watch?v=oKb4a90ZG7s">Learning Challenges in Natural Language Processing</a>
+		    <p class="abstract">
+		      As the availability of data for language learning grows, the role of linguistic structure is under scrutiny. At the same time, it is imperative to closely inspect patterns in data which might present loopholes for models to obtain high performance on benchmarks. In a two-part talk, I will address each of these challenges.
+		      <br/>
+		      First, I will introduce the paradigm of scaffolded learning. Scaffolds enable us to leverage inductive biases from one structural source for prediction of a different, but related structure, using only as much supervision as is necessary. We show that the resulting representations achieve improved performance across a range of tasks, indicating that linguistic structure remains beneficial even with powerful deep learning architectures.
+		      <br/>
+		      In the second part of the talk, I will showcase some of the properties exhibited by NLP models in large data regimes. Even as these models report excellent performance, sometimes claimed to beat humans, a closer look reveals that predictions are not a result of complex reasoning, and the task is not being completed in a generalizable way. Instead, this success can be largely attributed to exploitation of some artifacts of annotation in the datasets. I will discuss some questions our finding raises, as well as directions for future work.
+		    </p>
+		  </li>
+		  <li>
+		    May 24, 2019. <br/>
+		    Screening of two pre-recorded talks. Theme: <i>Incorporating expert knowledge in to learning systems to solve for learning under low resource setting such as in Medical Imaging or Robotics.</i>
+		    <div class="abstract">
+		    <ul>
+		      <li>
+			Presenter: Max Welling Title: <a href="https://sites.google.com/view/med-nips-2018/schedule">Making the case for using more inductive bias in deep learning</a>
+			  Making the case for using more inductive bias in deep learning.
+		      </li>
+		      <li>
+			Presenter: Anima Anandkumar. Title: <a href="https://sites.google.com/view/iclr2019-drlstructpred/speakers">Infusing Structure Into Machine Learning</a>
+			  Standard deep learning algorithms are based on a function-fitting approach that do not exploit any domain knowledge or constraints. This has several shortcomings: high sample complexity, and lack of robustness and generalization, especially under domain or task shifts. I will show several ways to infuse structure and domain knowledge to overcome these limitations, viz., tensors, graphs, symbolic rules, physical laws, and simulations.
+		      </li>
+		    </ul>
+		    </div>
+		  </li>
+
+		  <li>
+		    May 17, 2019. <br/>
+		    Screening of talks from ICLR 2019 workshop: <a href="https://deep-gen-struct.github.io/index.html">"Deep Generative Models for Highly Structured Data"</a>.
+		    <div class="abstract">
+		    <ul>
+		      <li>
+			Presenter: Yoshua Bengio. Title: <a href="https://deep-gen-struct.github.io/speakers.html">Meta-transfer learning for factorizing representations and knowledge for AI</a>
+			<br/>
+			Whereas machine learning theory has focused on generalization to examples from the same distribution as the training data, better understanding of the transfer scenarios where the observed distribution changes often in the lifetime of the learning agent is important, both for robust deployment and to achieve a more powerful form of generalization which humans seem able to enjoy and which seem necessary for learning agents. Whereas most machine learning algorithms and architectures can be traced back to assumptions about the training distributions, we also need to explore assumptions about how the observed distribution changes. We propose that sparsity of change in distribution, when knowledge is represented appropriately, is a good assumption for this purpose, and we claim that if that assumption is verified and knowledge represented appropriately, it leads to fast adaptation to changes in distribution, and thus that the speed of adaptation to changes in distribution can be used as a meta-objective which can drive the discovery of knowledge representation compatible with that assumption. We illustrate these ideas in causal discovery: is some variable a direct cause of another? and how to map raw data to a representation space where different dimensions correspond to causal variables for which a clear causal relationship exists? What generative model of the data can be quickly adapted to interventions in the agent's environment? We propose a large research program in which this non-stationarity assumption and meta-transfer objective is combined with other closely related assumptions about the world embodied in a world model, such as the consciousness prior (the causal graph is captured by a sparse factor graph) and the assumption that the causal variables are often those agents can act upon (the independently controllable factors prior), both of which should be useful for agents which plan, imagine and try to find explanations for what they observe.
+		      </li>
+		      <li>
+			Presenter: Yulia Tsvetkov. Title: <a href="https://deep-gen-struct.github.io/speakers.html">Continuous-Output Language Generation</a>
+			<br/>
+			  The softmax layer is used as the output layer of nearly all existing models for language generation. However, softmax is the computational bottleneck of these systems: it is the slowest layer to compute, and it has a huge memory footprint; to reduce time- and memory-complexity, many language generation systems limit their output vocabulary to a few tens of thousands of most frequent words, sacrificing the linguistic diversity and completeness of outputs. Finally, generating language using generative adversarial networks (GANs) is a notoriously hard task specifically due to the softmax layer. In this talk I'll introduce continuous-output generation—a general modification to the seq2seq models for generating text sequences which does away with the softmax layer, replacing it by the embedding layer. I will also describe ongoing work which explores alternative losses for continuous-output generation, approaches to efficient decoding, and continuous-output GANs for text.
+		      </li>
+		    </ul>
+		    </div>
+		  </li>
+		</ul>
+		<h4> Autumn 2017 </h4>
+		<ul>
+			<li>November 1, 2017. Presenter: Shiv Shankar. Paper: <br /><a href="https://arxiv.org/abs/1710.01813">Neural Task Programming: Learning to Generalize Across Hierarchical Tasks</a>, Danfei Xu, Suraj Nair, Yuke Zhu, Julian Gao, Animesh Garg, Li Fei-Fei, Silvio Savarese, 2017.</li>
+			<li>October 25, 2017. Presenter: <a href="https://www.ee.iitb.ac.in/~manojg/">Manoj Gopalkrishnan</a>. <br />Talk Title: "Algorithmic Biology: Are biochemical reactions networks implementing machine learning algorithms?" </li>
+			<li>August 30, 2017. Presenter: <a href="https://www.cse.iitb.ac.in/~sidch">Siddhartha Chaudhuri</a>. Papers: <br /> 1. <a href="http://stanford.edu/~rqi/pointnet/">PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation</a>, Charles R. Qi, Hao Su, Kaichun Mo, Leonidas J. Guibas, CVPR 2017. <br /> 2. <a href="https://arxiv.org/abs/1611.05009">OctNet: Learning Deep 3D Representations at High Resolutions</a>, Gernot Riegler, Ali Osman Ulusoy, Andreas Geiger, ICML 2017. <br /> 3. <a href="https://wang-ps.github.io/O-CNN.html">O-CNN: Octree-based Convolutional Neural Networks for 3D Shape Analysis</a>, Peng-Shuai Wang, Yang Liu, Yu-Xiao Guo, Chun-Yu Sun, Xin Tong, SIGGRAPH 2017.</li>
+			<li>August 9, 2017. Presenter: <a href="https://www.cse.iitb.ac.in/~sunita">Sunita Sarawagi</a>. Papers: <br /> 1. <a href="https://arxiv.org/pdf/1703.04363.pdf">Deep Value Networks Learn to Evaluate and Iteratively Refine Structured Outputs</a>, M. Gygli, M. Norouzi, A. Angelova, ICML 2017. <br /> 2. <a href="https://arxiv.org/pdf/1703.05667.pdf">End-to-End Learning for Structured Prediction Energy Networks</a>, D. Belanger, B. Yang, A. McCallum, ICML 2017.</li>
+			<li>July 26, 2017. Presenter: <a href="http://sarathchandar.in/">Sarath Chandar</a>, Ph.D. student at University of Montreal. <br />Talk Title: "<a href="sarath_MANNs_abstract.txt">Memory Augmented Neural Networks</a>". Presented a version of <a href="https://sites.google.com/view/mann-emnlp2017/">his tutorial</a> that appeared at EMNLP 2017.</li>
+		 </ul>
+		<h4> Spring 2017 </h4>
+		<ul>
+			<li>Apr 12, 2017. Presenter: <a href="https://www.cse.iitb.ac.in/~shivaram">Shivaram Kalyanakrishnan</a>. Paper: "<a href="https://arxiv.org/pdf/1609.05566.pdf">Label-Free Supervision	of Neural Networks with Physics and Domain Knowledge</a>", Russell Stewart and Stefano Ermon, AAAI 2017. </li>
+			<li>Mar 29, 2017. Presenter: <a href="https://www.cse.iitb.ac.in/~sidch">Siddhartha Chaudhuri</a>. Papers: <br /> 1. <a href="https://people.cs.umass.edu/~kalo/papers/viewbasedcnn/su15mvcnn.pdf">Multi-view Convolutional Neural Networks for 3D Shape Recognition</a>,Hang Su, Subhransu Maji, Evangelos Kalogerakis, Erik Learned-Miller, ICCV 2015. <br /> 2. <a href="https://arxiv.org/pdf/1612.02808">3D Shape Segmentation with Projective Convolutional Networks</a>, Evangelos Kalogerakis, Melinos Averkiou, Subhransu Maji and Siddhartha Chaudhuri, CVPR 2017.</li>
+			<li>Mar 15, 2017. Presenter: Vihari Piratla. Slides are <a href="https://www.cse.iitb.ac.in/~viharip/slides/mlr_icml17.html">here</a>. Papers: <br /> 1. <a href="https://openreview.net/pdf?id=H1oyRlYgg">On large-batch training for deep learning: Generalization gap and sharp minima</a>", N. Keskar, D. Mudigere, J. Nocedal, M. Smelyanskiy, P. Tang, ICLR 2017. <br /> 2. <a href="https://openreview.net/pdf?id=Sy8gdB9xx">Understanding deep learning requires re-thinking generalization</a>, C. Zhang, S. Bengio, M. Hardt, B. Recht, O. Vinyals, ICLR 2017.</li>
+			<li>Mar 1, 2017. Presenter: <a href="https://www.cse.iitb.ac.in/~saketh/">Saketh Nath</a>. (Part II) Paper: "<a href="https://1drv.ms/b/s!Au6Zdrbq2x4pgcpLFTDbo1Z2zqqxjA">Kernel Embeddings of Conditional Distributions</a>", Le Song, Kenji Fukumizu, Arthur Gretton, IEEE Signal Processing Magazine, 30(4), 2013.</li>
+			<li>Feb 8, 2017. Presenter: <a href="https://www.cse.iitb.ac.in/~saketh/">Saketh Nath</a>. (Part I) Paper: "<a href="https://1drv.ms/b/s!Au6Zdrbq2x4pgcpLFTDbo1Z2zqqxjA">Kernel Embeddings of Conditional Distributions</a>", Le Song, Kenji Fukumizu, Arthur Gretton, IEEE Signal Processing Magazine, 30(4), 2013.</li>
+			<li>Jan 11, 2017. Presenter: <a href="www.vishalkaushal.in">Vishal Kaushal</a>. Paper: "<a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Redmon_You_Only_Look_CVPR_2016_paper.html">You Only Look Once: Unified, Real-Time Object Detection</a>", Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi, CVPR 2016.</li>
+		</ul> -->
+		
+		<!--<iframe src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=r4d6qlk6udiqgrnbd30r8r36l0%40group.calendar.google.com&amp;color=%2342104A&amp;ctz=Asia%2FCalcutta" style="border-width:0" width="800" height="300" frameborder="0" scrolling="no"></iframe>-->
+		<p align="right">Page maintained by: <a href="https://anshul3899.github.io">Anshul Yadav</a></p>
+	</div>
+	</body>
+</html>
